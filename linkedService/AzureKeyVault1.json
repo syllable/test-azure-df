@@ -1,0 +1,11 @@
+{
+	"name": "AzureKeyVault1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://myvault234234234234.vault.azure.net"
+		},
+		"secretName": "qpalym-tech"
+	}
+}
