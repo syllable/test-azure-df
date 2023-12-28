@@ -5,7 +5,7 @@
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "https://pg.he.qpalym.com/internal/api/beancount/\n    \n",
+			"url": "pg.he.qpalym.com/internal/api/beancount/    ",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Basic",
 			"userName": "tech",
