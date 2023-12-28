@@ -20,7 +20,7 @@
 					},
 					{
 						"name": "Destination",
-						"value": "beancount-prices//prices"
+						"value": "beancount-prices/prices"
 					}
 				],
 				"typeProperties": {
