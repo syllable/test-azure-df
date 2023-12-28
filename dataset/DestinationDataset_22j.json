@@ -10,7 +10,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "prices",
+				"fileName": {
+					"value": "prices",
+					"type": "Expression"
+				},
 				"container": "beancount-prices"
 			},
 			"columnDelimiter": ",",
@@ -18,6 +21,23 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "date",
+				"type": "String"
+			},
+			{
+				"name": "symbol",
+				"type": "String"
+			},
+			{
+				"name": "amount",
+				"type": "String"
+			},
+			{
+				"name": "currency",
+				"type": "String"
+			}
+		]
 	}
 }
