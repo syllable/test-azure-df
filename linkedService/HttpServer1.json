@@ -1,0 +1,22 @@
+{
+	"name": "HttpServer1",
+	"properties": {
+		"description": "https://pg.he.qpalym.com/internal/api/beancount",
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://pg.he.qpalym.com/internal/api/beancount",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Basic",
+			"userName": "tech",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "qpalym-tech"
+			}
+		}
+	}
+}
