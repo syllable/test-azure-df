@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "data-factory-0000134"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"HttpServer1_password": {
+			"value": ""
+		},
+		"AzurePostgreSql1_connectionString": {
+			"value": ""
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://myvault234234234234.vault.azure.net"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://pg.he.qpalym.com/internal/api/beancount"
+		},
+		"HttpServer1_properties_typeProperties_userName": {
+			"value": "tech"
+		},
+		"beancount prices_properties_typeProperties_url": {
+			"value": "https://pg.he.qpalym.com/internal/api/beancount/"
+		},
+		"beancount prices_properties_typeProperties_userName": {
+			"value": "tech"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
