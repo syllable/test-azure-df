@@ -37,15 +37,10 @@
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
-						}
+						"type": "AzurePostgreSQLSink",
+						"writeBatchSize": 1000000,
+						"writeBatchTimeout": "00:30:00",
+						"writeMethod": "CopyCommand"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -57,45 +52,53 @@
 									"ordinal": 1
 								},
 								"sink": {
-									"name": "date",
-									"type": "String"
+									"name": "price_date",
+									"type": "DateTime",
+									"physicalType": "date"
 								}
 							},
 							{
 								"source": {
 									"type": "String",
+									"physicalType": "String",
 									"ordinal": 3
 								},
 								"sink": {
 									"name": "symbol",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"type": "Decimal",
-									"ordinal": 4
-								},
-								"sink": {
-									"name": "amount",
-									"type": "String"
+									"type": "String",
+									"physicalType": "text"
 								}
 							},
 							{
 								"source": {
 									"type": "String",
+									"physicalType": "String",
+									"ordinal": 4
+								},
+								"sink": {
+									"name": "amount",
+									"type": "Decimal",
+									"physicalType": "numeric"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"physicalType": "String",
 									"ordinal": 5
 								},
 								"sink": {
 									"name": "currency",
-									"type": "String"
+									"type": "String",
+									"physicalType": "text"
 								}
 							}
 						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
+							"treatBooleanAsNumber": false,
+							"dateFormat": "yyyy-MM-dd"
 						}
 					}
 				},
@@ -107,7 +110,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_22j",
+						"referenceName": "AzurePostgreSqlTable1",
 						"type": "DatasetReference"
 					}
 				]
